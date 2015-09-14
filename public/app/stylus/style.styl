@@ -1,0 +1,71 @@
+@import "nib"
+@import "normalize.styl"
+
+primary_color = #FFC107
+primary_dark_color = #FFA000
+accent_color = #03A9F4
+primary_text = #212121
+secondary_text = #727272
+light-primary-color = #FFECB3
+btn-float-color = #e91e63
+morado_color = #5a5bbe
+
+
+body
+  background rgba(#B6B6B6, .2)
+  font-family sans-serif, arial
+  font-size 16px
+  margin 0
+  padding 0
+
+.form
+  display flex
+  justify-content center
+  margin 0
+  flex-wrap wrap
+  position relative
+  box-shadow 0px 1px 1.5px rgba(black, 0.6), 0px 1px 1px rgba(black, 0.12)
+  background white
+  padding .5em
+  margin-top 1em
+
+.form__btn
+  color white
+  background btn-float-color
+  border 0
+  width 50px
+  height 50px
+  border-radius 50%
+  box-shadow 0px 1px 1.5px rgba(black, 0.6), 0px 1px 1px rgba(black, 0.12)
+  position absolute
+  top 4em
+  outline 0
+  font-size 1.5em
+  right 9em
+
+.form__name
+  padding .5em
+
+.form__message
+  resize none
+  width 55vw !important
+
+.form__name
+.form__message
+  border-bottom 1px solid primary_text
+  border-width 0 0 1px
+  box-shadow 0px 1px 1.5px rgba(black, 0.6), 0px 1px 1px rgba(black, 0.12)
+  margin 1em 0 0 0
+  outline 0
+  width 50vw
+  transition all ease 1s
+  &:focus
+    border-bottom 2px solid accent_color
+
+.header
+  text-align center
+  box-shadow 0px 1px 1.5px rgba(black, 0.6), 0px 1px 1px rgba(black, 0.12)
+  margin 0
+  background accent_color
+  padding .5em
+  color white
