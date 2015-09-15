@@ -20018,15 +20018,15 @@ var List = (function (_React$Component) {
     value: function render() {
       return _react2['default'].createElement(
         'div',
-        null,
+        { className: 'message__wrapper' },
         _react2['default'].createElement(
           'h3',
-          null,
+          { className: 'mensaje__name' },
           this.props.name
         ),
         _react2['default'].createElement(
           'p',
-          null,
+          { className: 'mensaje__msg' },
           this.props.mensaje
         )
       );
@@ -20093,16 +20093,20 @@ var Listas = (function (_React$Component) {
 
       if (!this.state.messages.length) {
         return _react2['default'].createElement(
-          'h1',
-          null,
-          'No hay elemento que mostar'
+          'h3',
+          { className: 'no__hay' },
+          'No hay mensajes'
         );
       }
       return _react2['default'].createElement(
         'ul',
-        null,
+        { className: 'mensaje__list' },
         this.state.messages.map(function (mensaje, index) {
-          return _react2['default'].createElement(_list2['default'], { key: index, name: mensaje.name, mensaje: mensaje.mensaje });
+          return _react2['default'].createElement(
+            'li',
+            { key: index, className: 'message__item' },
+            _react2['default'].createElement(_list2['default'], { name: mensaje.name, mensaje: mensaje.mensaje })
+          );
         })
       );
     }

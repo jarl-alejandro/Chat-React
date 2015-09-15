@@ -25,15 +25,17 @@ class Listas extends React.Component{
 
     if(!this.state.messages.length){
       return(
-        <h1>No hay elemento que mostar</h1>
+        <h3 className="no__hay">No hay mensajes</h3>
       )
     }
     return(
-      <ul>
+      <ul className="mensaje__list">
         {
           this.state.messages.map((mensaje, index)=>{
             return(
-              <List key={ index } name={ mensaje.name } mensaje={ mensaje.mensaje } />
+              <li key={ index } className="message__item">
+                <List name={ mensaje.name } mensaje={ mensaje.mensaje } />
+              </li>
             )
           })
         }

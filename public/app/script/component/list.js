@@ -10,9 +10,9 @@ class List extends React.Component{
 
   render(){
     return(
-      <div>
-        <h3>{ this.props.name }</h3>
-        <p>{ this.props.mensaje }</p>
+      <div className="message__wrapper">
+        <h3 className="mensaje__name">{ this.props.name }</h3>
+        <p className="mensaje__msg">{ this.props.mensaje }</p>
       </div>
     )
   }
